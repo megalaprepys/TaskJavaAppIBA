@@ -45,7 +45,7 @@ public class RegistryExecution {
 			while((readLine = brOut.readLine()) != null) {
 				outputBuffer.append(readLine);
 				// Ignore empty line and key
-				if(count>1) {
+				if(count>1 && !(readLine.equals(""))) {
 					String[] outputComponents = outputBuffer.toString().split("  ");
 					String key = outputComponents[outputComponents.length - 5];
 					list_key.add(key);
